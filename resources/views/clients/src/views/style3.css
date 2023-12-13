@@ -1,0 +1,261 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize !important;
+}
+
+
+
+.mainsection {
+    height: 100vh;
+
+
+}
+
+.hold {
+    margin: 0 90px;
+
+    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/bg-hero.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+@media screen and (max-width:900px) {
+    .hold {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+
+.navbar {
+    height: 60px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: inline;
+    color: white;
+    margin: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+}
+
+.navbar ul li:hover {
+    color: #e78a27;
+    font-weight: bold;
+}
+
+.navbar ul li button {
+    padding: 13px 20px;
+    background-color: #e78a27;
+    color: white;
+    font-size: 20px;
+    border: none;
+}
+
+.leftnav {
+    margin-right: 60px;
+}
+
+@media screen and (max-width: 900px) {
+    .hold {
+        margin: 0;
+        width: 100%;
+    }
+
+    .navbar {
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        position: fixed;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        /* background-color: rgba(15, 23, 43, .9); */
+        background-color: rgb(15, 23, 43);
+
+        z-index: 1000;
+        top: 0;
+    }
+
+    .navbar.show-menu {
+        transform: translateY(0);
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .leftnav {
+        margin-right: 0;
+    }
+
+    .hold.show-menu .navbar {
+        transform: translateY(0);
+    }
+
+    .navbar {
+        /* Other styles */
+        transform: translateY(-100%);
+
+    }
+
+    .logo {
+        position: absolute;
+        bottom: 0;
+
+    }
+
+}
+
+.icon {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    top: 13px;
+    z-index: 9999;
+    right: 16px;
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .icon {
+        display: block;
+    }
+}
+
+.logo {
+    font-size: 55px;
+    color: #e78a27;
+    letter-spacing: 2px;
+    margin: 30px;
+    font-weight: bold;
+}
+
+.secondsec {
+    background-color: #e78a27;
+}
+
+.mainsection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mainsection img {
+    height: 600px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.spinning-image {
+    animation: spin 18s linear infinite;
+    /* Adjust duration and timing function as needed */
+}
+
+.textmain .sec {
+    color: white;
+    font-size: 23px;
+}
+
+.textmain {
+    margin: 0 20px;
+}
+
+.fi {
+    font-size: 60px;
+    color: #e78a27 !important;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.explore {
+    padding: 20px;
+    border: none;
+    background-color: #e78a27;
+    color: white;
+    font-size: 23px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .mainsection {
+        flex-direction: column;
+
+    }
+
+
+
+    .mainsection img {
+        height: 300px;
+    }
+
+    .textmain * {
+
+        font-size: smaller;
+    }
+
+    .fi {
+        font-size: 30px;
+    }
+
+    .textmain button {
+        font-size: 17px;
+        padding: 10px;
+    }
+
+    .textmain {
+        margin-top: 150px;
+        text-align: center;
+    }
+}
+
+.logo3 {
+    position: absolute;
+    top: 0;
+    color: #e78a27;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 29px;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .logo3 {
+        visibility: visible;
+    }
+}
